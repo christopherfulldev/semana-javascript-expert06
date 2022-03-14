@@ -1,8 +1,6 @@
 # Spotify Radio - Semana JS Expert 6.0
 
-Seja bem vindo(a) à sexta Semana Javascript Expert. Este é o código inicial para iniciar nossa jornada.
-
-Marque esse projeto com uma estrela 🌟
+Projeto construido durante a semana "JS Expert", "clone" do app Spotify com nova funcionalidade para inserir efeitos durante a transmissão de audio. 🌟
 
 Acesse a [**comunidade exclusiva no discord**](https://bit.ly/semanajsexpert-discord) para tirar suas dúvidas e conhecer pessoas: 
 ## Preview

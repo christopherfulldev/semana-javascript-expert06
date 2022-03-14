@@ -1,0 +1,20 @@
+{
+  "name": "semana-javascript-expert06",
+  "version": "1.0.0",
+  "description": "Projeto construido durante a semana \"JS Expert\", \"clone\" do app Spotify com nova funcionalidade para inserir efeitos durante a transmissão de audio. 🌟",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopherfulldev/semana-javascript-expert06.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christopherfulldev/semana-javascript-expert06/issues"
+  },
+  "homepage": "https://github.com/christopherfulldev/semana-javascript-expert06#readme"
+}
