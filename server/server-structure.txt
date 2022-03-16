@@ -1,0 +1,7 @@
+server
+    service - Business or processing rules
+    controller - Intermediary between the business layer and the presentation layer
+    routes - Presentation layer
+    server - Configure the server "without starting"
+    index - Initialize the server and expose it to the web
+    config - All static in project

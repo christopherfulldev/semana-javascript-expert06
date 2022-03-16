@@ -4,17 +4,28 @@
   "description": "Projeto construido durante a semana \"JS Expert\", \"clone\" do app Spotify com nova funcionalidade para inserir efeitos durante a transmissão de audio. 🌟",
   "main": "demo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "live-reload": "nodemon server/index.js"
+  },
+  "engines": {
+    "node": "17"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christopherfulldev/semana-javascript-expert06.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Christopher Pinto",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/christopherfulldev/semana-javascript-expert06/issues"
   },
-  "homepage": "https://github.com/christopherfulldev/semana-javascript-expert06#readme"
+  "homepage": "https://github.com/christopherfulldev/semana-javascript-expert06#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "pino": "^7.8.1"
+  }
 }
