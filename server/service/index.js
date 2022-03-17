@@ -1,6 +1,7 @@
 'use strict';
 const { join, extname } = require('path');
-const { fsPromises } = require('fs/promises');
+const fsPromises = require('fs/promises');
+const fs = require('fs');
 const config = require('../config');
 
 const services = {

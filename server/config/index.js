@@ -1,20 +1,25 @@
 'use strict';
-const path = require('path');
-const { fileURLToPath } = require('url');
+const { dirname, join} = require('path');
+const { fileURLToPath, pathToFileURL } = require('url');
+const currentDirPath = dirname(fileURLToPath(pathToFileURL(__dirname).toString()))
+const rootDirPath = join(currentDirPath, '../');
+const audioDirPath = join(rootDirPath, 'audio');
+const publicDirPath = join(rootDirPath, 'public');
 
 const normalizedPaths = {
-    PORT: process.env.PORT || 3000,
-    rootDirPath: path.format(__dirname, '../../../semana-javascript-expert06'),
-    audioDirPath: path.resolve(__dirname, '../../client/audio'),
-    publicDirPath: path.resolve(__dirname, '../../client/public'),
-    songsDirPath: path.resolve(__dirname, '../../client/audio/songs'),
-    fxDirPath: path.resolve(__dirname,'../../client/audio/fx'),
+    PORT: process.env.PORT || 5000,
+    currentDirPath: currentDirPath,
+    rootDirPath: rootDirPath,
+    audioDirPath: audioDirPath,
+    publicDirPath: publicDirPath,
+    songsDirPath: join(audioDirPath, 'songs'),
+    fxDirPath: join(rootDirPath, 'fx'),
     pages: {
-        homeHTML: path.resolve(__dirname,'../../client/public/home/index.html'),
-        controllerHTML: path.resolve(__dirname, '../../client/public/controller/index.html'),
+        homeHTML: 'home/index.html',
+        controllerHTML: 'controller/index.html',
     },
     location: {
-        home: path.resolve(__dirname,'../../client/public/home/index.html'),
+        home: '/home',
     }
 };
 
