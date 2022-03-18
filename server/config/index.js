@@ -7,7 +7,7 @@ const audioDirPath = join(rootDirPath, 'audio');
 const publicDirPath = join(rootDirPath, 'public');
 
 const normalizedPaths = {
-    PORT: process.env.PORT || 5000,
+    PORT: process.env.PORT || 7400,
     currentDirPath: currentDirPath,
     rootDirPath: rootDirPath,
     audioDirPath: audioDirPath,
