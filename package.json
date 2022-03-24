@@ -5,7 +5,7 @@
   "main": "demo.js",
   "scripts": {
     "start": "node server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "live-reload": "nodemon server/index.js"
   },
   "engines": {
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/christopherfulldev/semana-javascript-expert06#readme",
   "devDependencies": {
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
