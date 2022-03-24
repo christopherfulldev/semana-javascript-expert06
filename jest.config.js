@@ -7,21 +7,21 @@ const defaultTestConfig = {
     'text',
     'lcov'
   ],
-  coverageTreshold: {
+  coverageThreshold: {
     global: {
-      branch: 100,
+      branches: 100,
       functions: 100,
       lines: 100,
       statements: 100
     }
   },
   maxWorkers: '50%',
-  wathPathIgnorePatterns: [
-    'node_modules'
+  watchPathIgnorePatterns: [
+    '/node_modules/'
   ]
 };
 
-module.exports = {
+const backEndConfig = {
   projects: [
     {
       ...defaultTestConfig
@@ -29,7 +29,7 @@ module.exports = {
 
     {
       testEnvironment: 'node',
-      displayName: 'backEnd',
+      displayName: 'backend',
       collectCoverageFrom: [
         'server/',
         '!server/index'
@@ -40,7 +40,36 @@ module.exports = {
       ],
       testMatch: [
         '**/tests/**/server/**/*.test.js',
-      ]
-    }
-  ]
+      ],
+    },
+  ],
+};
+
+const frontEndConfig = {
+  projects: [
+    {
+      ...defaultTestConfig
+    },
+
+    {
+      testEnvironment: 'jsdom',
+      displayName: 'frontend',
+      collectCoverageFrom: [
+        'public/',
+      ],
+      transformIgnorePatterns: [
+        'node_modules',
+        'server',
+      ],
+      testMatch: [
+        '**/tests/**/public/**/*.test.js',
+      ],
+    },
+  ],
+};
+
+
+module.exports = {
+  ...backEndConfig,
+  ...frontEndConfig,
 };
