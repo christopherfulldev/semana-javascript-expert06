@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 const defaultTestConfig = {
-  coverageDirectory: 'coverage',
-  coverageProvider: 'v8',
+  coverageDirectory: "coverage",
+  coverageProvider: "v8",
   coverageReporters: [
-    'text',
-    'lcov'
+    "text",
+    "lcov"
   ],
   coverageThreshold: {
     global: {
@@ -13,63 +13,53 @@ const defaultTestConfig = {
       functions: 100,
       lines: 100,
       statements: 100
-    }
+    },
   },
-  maxWorkers: '50%',
+  maxWorkers: "50%",
   watchPathIgnorePatterns: [
-    '/node_modules/'
-  ]
+    "/node_modules/"
+  ],
 };
 
 const backEndConfig = {
-  projects: [
-    {
-      ...defaultTestConfig
-    },
-
-    {
-      testEnvironment: 'node',
-      displayName: 'backend',
+      ...defaultTestConfig,
+      testEnvironment: "node",
+      displayName: "backend",
       collectCoverageFrom: [
-        'server/',
-        '!server/index'
-      ],
-      tranformIgnorePatterns: [
-        'node_modules',
-        'public'
-      ],
-      testMatch: [
-        '**/tests/**/server/**/*.test.js',
-      ],
-    },
-  ],
-};
-
-const frontEndConfig = {
-  projects: [
-    {
-      ...defaultTestConfig
-    },
-
-    {
-      testEnvironment: 'jsdom',
-      displayName: 'frontend',
-      collectCoverageFrom: [
-        'public/',
+        "server",
+        "!server/index",
       ],
       transformIgnorePatterns: [
-        'node_modules',
-        'server',
+        "node_modules",
+        "public",
       ],
       testMatch: [
-        '**/tests/**/public/**/*.test.js',
+        "**/tests/**/server/**/*.test.js",
       ],
-    },
-  ],
-};
+    };
+
+const frontEndConfig = {
+      ...defaultTestConfig,
+      testEnvironment: "jsdom",
+      displayName: "frontend",
+      collectCoverageFrom: [
+        "public",
+      ],
+      transformIgnorePatterns: [
+        "node_modules",
+        "server",
+      ],
+      testMatch: [
+        "**/tests/**/public/**/*.test.js",
+      ],
+    };
+
+const testModulesConfig = {
+  projects:[
+    {frontEndConfig},
+    {backEndConfig},
+  ]
+}
 
 
-module.exports = {
-  ...backEndConfig,
-  ...frontEndConfig,
-};
+module.exports = testModulesConfig;
