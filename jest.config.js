@@ -1,6 +1,7 @@
 "use strict";
 
 const defaultTestConfig = {
+  collectCoverage: true,
   coverageDirectory: "coverage",
   coverageProvider: "v8",
   coverageReporters: [
@@ -26,7 +27,7 @@ const backEndConfig = {
       testEnvironment: "node",
       displayName: "backend",
       collectCoverageFrom: [
-        "server",
+        "server/",
         "!server/index",
       ],
       transformIgnorePatterns: [
@@ -43,7 +44,7 @@ const frontEndConfig = {
       testEnvironment: "jsdom",
       displayName: "frontend",
       collectCoverageFrom: [
-        "public",
+        "public/",
       ],
       transformIgnorePatterns: [
         "node_modules",
@@ -56,8 +57,8 @@ const frontEndConfig = {
 
 const testModulesConfig = {
   projects:[
-    {frontEndConfig},
-    {backEndConfig},
+    frontEndConfig,
+    backEndConfig,
   ]
 }
 
