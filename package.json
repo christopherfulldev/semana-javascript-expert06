@@ -5,7 +5,9 @@
   "main": "demo.js",
   "scripts": {
     "start": "node server/index.js",
-    "test": "jest",
+    "test": "jest --no-cache",
+    "test:watch": "jest --no-cache --watchAll",
+    "test:coverage": "jest --no-cache --coverage tests/unit",
     "live-reload": "nodemon server/index.js"
   },
   "engines": {

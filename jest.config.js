@@ -55,7 +55,7 @@ const frontEndConfig = {
       ],
     };
 
-const testModulesConfig = {
+const jestTestModulesConfig = {
   projects:[
     frontEndConfig,
     backEndConfig,
@@ -63,4 +63,4 @@ const testModulesConfig = {
 }
 
 
-module.exports = testModulesConfig;
+module.exports = jestTestModulesConfig;
