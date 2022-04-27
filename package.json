@@ -5,9 +5,9 @@
   "main": "demo.js",
   "scripts": {
     "start": "node server/index.js",
-    "test": "jest --no-cache",
-    "test:watch": "jest --no-cache --watchAll",
-    "test:coverage": "jest --no-cache --coverage tests/unit",
+    "test": "LOG_DISABLED=true jest --no-cache",
+    "test:watch": "LOG_DISABLED=true jest --no-cache --watchAll",
+    "test:coverage": "LOG_DISABLED=true jest --no-cache --coverage tests/unit",
     "live-reload": "nodemon server/index.js"
   },
   "engines": {
@@ -29,6 +29,7 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "pino": "^7.8.1"
+    "pino": "^7.8.1",
+    "sinon": "^13.0.2"
   }
 }
