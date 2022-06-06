@@ -38,8 +38,7 @@ describe('#Routes - test site for API response', () => {
         params.request.method = 'GET';
         params.request.url = '/home';
         const mockFileStream = testUtils.generateReadableStream(['data']);
-console.log('contoller.prototype', controller.prototype
-    )
+        
         jest.spyOn(
             controller.prototype,
             controller.prototype.getFileStream.name,
